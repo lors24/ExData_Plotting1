@@ -13,6 +13,7 @@ unlink(temp)
 
 data$Date <- dmy(data$Date)
 data_S <- subset(data, data$Date == dmy("01-02-2007") | data$Date == dmy("02-02-2007"))
+# subset the data to the dates that we are interested in
 
 png(filename = "plot1.png")
 par(mar = c(5,5,3,1))
