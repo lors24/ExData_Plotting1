@@ -13,8 +13,11 @@ unlink(temp)
 
 data$Date <- dmy(data$Date)
 data_S <- subset(data, data$Date == dmy("01-02-2007") | data$Date == dmy("02-02-2007"))
-
+rownames(data_S) <- NULL
 data_S$fec <- strptime(paste(data_S[,1], data_S[,2], sep = ","), "%Y-%m-%d,%H:%M:%S")
+data_S$Date <- NULL
+data_S$Time <- NULL
+
 
 png(filename = "plot3.png")
 par(mar = c(3,4,2,2))
