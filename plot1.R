@@ -16,7 +16,7 @@ data_S <- subset(data, data$Date == dmy("01-02-2007") | data$Date == dmy("02-02-
 # subset the data to the dates that we are interested in
 
 png(filename = "plot1.png")
-par(mar = c(5,5,3,1))
+par(mar = c(4.9,5,3,1))
 hist(data_S$Global_active_power, col = "red",
      xlab = "Global Active Power (kilowatts)",
      main = "Global Active Power")
